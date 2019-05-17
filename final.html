@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>My Piano - Final Project</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="final.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="final.js" ></script>
+</head>
+<body>
+  <a href="#main" id="skip-main-content">Skip to Main Content</a>
+  <header id="header">
+    <div class="page-wrapper flex-container">
+    <h1 id="site-name"><a href="final.html">My Piano</a></h1>
+    <nav id="main-nav">
+      <h2 class="hidden">Main Navigation</h2>
+      <ul class="menu">
+        <li><a href="final.html">Home</a></li>
+        <li><a href="#">Contact Me</a></li>
+        <li><a href="#">Other Links</a></li>
+      </ul>
+    </nav>
+    </div>
+  </header>
+  
+  <main id="main">
+    <div class="page-wrapper">
+      <div id="page-info">
+        <h2>My Piano</h2>
+        <p>Keyboard Shortcuts: Keyboard Row Q to \ correspond to the regular keys. Keyboard Row 1 to Backspace correspond to the sharp keys. ' is High B and ; is High A Sharp. </p>
+        <p>Play the piano on it's own, listen to a demo, or take the piano challenge.</p>
+        <p>Challenge instructions: Notes will appear above the piano and slowly move toward the piano. Press the piano key when the the note reaches the piano key to score points.</p>
+      </div>
+      <div id="piano-box" class="grid-area">
+        <div data-keycode="81" class="piano-key" tabindex="0"><span class="hidden">Mid C</span></div>
+        <div data-keycode="50" class="piano-key-black" tabindex="0"><span class="hidden">Mid C Sharp</span></div>
+        <div data-keycode="87" class="piano-key" tabindex="0"><span class="hidden">Mid D</span></div>
+        <div data-keycode="51" class="piano-key-black" tabindex="0"><span class="hidden">Mid D Sharp</span></div>
+        <div data-keycode="69" class="piano-key" tabindex="0"><span class="hidden">Mid E</span></div>
+        <div data-keycode="82" class="piano-key" tabindex="0"><span class="hidden">Mid F</span></div>
+        <div data-keycode="53" class="piano-key-black" tabindex="0"><span class="hidden">Mid F Sharp</span></div>
+        <div data-keycode="84" class="piano-key" tabindex="0"><span class="hidden">Mid G</span></div>
+        <div data-keycode="54" class="piano-key-black" tabindex="0"><span class="hidden">Mid G Sharp</span></div>
+        <div data-keycode="89" class="piano-key" tabindex="0"><span class="hidden">Mid A</span></div>
+        <div data-keycode="55" class="piano-key-black" tabindex="0"><span class="hidden">Mid A Sharp</span></div>
+        <div data-keycode="85" class="piano-key" tabindex="0"><span class="hidden">Mid B</span></div>
+        <div data-keycode="73" class="piano-key" tabindex="0"><span class="hidden">High C</span></div>
+        <div data-keycode="57" class="piano-key-black" tabindex="0"><span class="hidden">High C Sharp</span></div>
+        <div data-keycode="79" class="piano-key" tabindex="0"><span class="hidden">High D</span></div>
+        <div data-keycode="48" class="piano-key-black" tabindex="0"><span class="hidden">High D Sharp</span></div>
+        <div data-keycode="80" class="piano-key" tabindex="0"><span class="hidden">High E</span></div>
+        <div data-keycode="219" class="piano-key" tabindex="0"><span class="hidden">High F</span></div>
+        <div data-keycode="61" class="piano-key-black" tabindex="0"><span class="hidden">High F Sharp</span></div>
+        <div data-keycode="221" class="piano-key" tabindex="0"><span class="hidden">High G</span></div>
+        <div data-keycode="8" class="piano-key-black" tabindex="0"><span class="hidden">High G Sharp</span></div>
+        <div data-keycode="220" class="piano-key" tabindex="0"><span class="hidden">High A</span></div>
+        <div data-keycode="59" class="piano-key-black" tabindex="0"><span class="hidden">High A Sharp</span></div>
+        <div data-keycode="222" class="piano-key" tabindex="0"><span class="hidden">High B</span></div>
+      </div>
+      <h3 id="score">Score: 0 Missed: 0</h3>
+      <div id="button-container" class="flex-container">
+        <button id=start-challenge-button>Start Challenge</button>
+        <button id=start-demo-button>Start Demo</button>
+      </div>
+    </div>
+  </main>
+
+  <section id="audio-files">
+    <!-- Audio files from: https://www.dropbox.com/sh/buuc6h937s62vw2/AADHdRxmmDCfcatwjxvdwAvNa?dl=0 -->
+    <h2 class="hidden">Audio Files</h2>
+    <audio data-keycode="81" src="pianokeys/middle_c.mp3"></audio>
+    <audio data-keycode="87" src="pianokeys/middle_d.mp3"></audio>
+    <audio data-keycode="69" src="pianokeys/middle_e.mp3"></audio>
+    <audio data-keycode="82" src="pianokeys/middle_f.mp3"></audio>
+    <audio data-keycode="84" src="pianokeys/middle_g.mp3"></audio>
+    <audio data-keycode="89" src="pianokeys/middle_a.mp3"></audio>
+    <audio data-keycode="85" src="pianokeys/middle_b.mp3"></audio>
+
+    <audio data-keycode="73" src="pianokeys/high_c.mp3"></audio>
+    <audio data-keycode="79" src="pianokeys/high_d.mp3"></audio>
+    <audio data-keycode="80" src="pianokeys/high_e.mp3"></audio>
+    <audio data-keycode="219" src="pianokeys/high_f.mp3"></audio>
+    <audio data-keycode="221" src="pianokeys/high_g.mp3"></audio>
+    <audio data-keycode="220" src="pianokeys/high_a.mp3"></audio>
+    <audio data-keycode="222" src="pianokeys/high_b.mp3"></audio>
+
+    <audio data-keycode="50" src="pianokeys/mid_c_sharp.mp3"></audio>
+    <audio data-keycode="51" src="pianokeys/mid_d_sharp.mp3"></audio>
+    <audio data-keycode="53" src="pianokeys/mid_f_sharp.mp3"></audio>
+    <audio data-keycode="54" src="pianokeys/mid_g_sharp.mp3"></audio>
+    <audio data-keycode="55" src="pianokeys/mid_a_sharp.mp3"></audio>
+
+    <audio data-keycode="57" src="pianokeys/high_c_sharp.mp3"></audio>
+    <audio data-keycode="48" src="pianokeys/high_d_sharp.mp3"></audio>
+    <audio data-keycode="61" src="pianokeys/high_f_sharp.mp3"></audio>
+    <audio data-keycode="8" src="pianokeys/high_g_sharp.mp3"></audio>
+    <audio data-keycode="59" src="pianokeys/high_a_sharp.mp3"></audio>
+  </section>
+
+  <footer id="footer">
+    <div class="page-wrapper">
+      <p>HTTP5104 - Final Project - Raymond Giang - Section B - n01304390</p>
+      <a href="http://www.freepik.com">Background Image Designed by Brgfx / Freepik</a>
+    </div>
+  </footer>
+</body>
+</html>
